@@ -7,7 +7,37 @@
     return Math.floor(Math.random() * (max-min+1)+min);
   }
   
-  
+  //lab7
+
+  function Shop (location,minCust,maxCust, avgsale){
+    this.location=location;
+    this.minCust=minCust;
+    this.maxCust=maxCust;
+    this.avgsale=avgsale;
+
+  }
+
+//thats it 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   let seattle= {
     location:'seattle',
     minCust:23,
