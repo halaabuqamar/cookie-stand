@@ -1,0 +1,44 @@
+
+* {
+    box-sizing: border-box;
+  }
+
+
+h1{
+background-color: rgb(204, 245, 245);
+font-family: 'Indie Flower', cursive;
+font-size: 400%;
+text-align: center;
+}
+ ul {
+     background-color: rgb(230, 254, 255);
+     font-family: 'Acme', sans-serif;
+     font-size:120%;
+
+    }  
+
+    #family{
+     float: left;
+     width: 30%;
+     height: 300;
+    }
+    
+   #frosted{
+       height:40%;
+       width: 25%;
+   }
+    
+    main p{
+        font-size: 300%;
+        background-color: rgb(210, 232, 133);
+        font-family: 'Risque', cursive;
+    }
+    
+    
+    
+    
+    
+    footer{
+        height: 30px;
+        background-color: rgb(255, 251, 207);
+    }
