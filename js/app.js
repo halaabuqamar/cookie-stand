@@ -1,8 +1,8 @@
 
   'use strict';
 
-  let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
-  
+  const hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
+  const footerTable=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
   
   function getRandomNumber(min,max){
     return Math.floor(Math.random() * (max-min+1)+min);
@@ -26,7 +26,9 @@
         );
       this.totalDailyCookies+=cookiePerHour;
       this.cookiesPerHour.push(cookiePerHour);
+      footerTable[i]+=cookiePerHour;
     };
+     footerTable[14]+=this.totalDailyCookies;
   }
     Shop.prototype.render=function(){
       this.calcCookiesPerHour();
@@ -48,9 +50,6 @@
       rowEl.appendChild(tdEl1);
       tdEl1.textContent= this.totalDailyCookies ;
      };
-
-
-    
      const seattle=new Shop('Seattle',23,65,6.3);
      const tokyo=new Shop('Tokyo',3,24,1.2);
      const dubai=new Shop('Dubai',11,38,3.7);
@@ -58,12 +57,71 @@
      const lima=new Shop('Lima',2,16,4.6);
     
     
+     
+     
+     function header() {
+      const containerTable= document.getElementById('shops');
+      const rowEl2=document.createElement('tr');
+      containerTable.appendChild(rowEl2);
+      
+      const h2El2=document.createElement('th');
+      rowEl2.appendChild(h2El2);
+      h2El2.textContent= 'Location';
+      for (let i = 0; i < hours.length; i++) {
+        const h2El3=document.createElement('th');
+        rowEl2.appendChild(h2El3);
+        h2El3.textContent= hours[i];
+      }
+      const h2El4=document.createElement('th');
+      rowEl2.appendChild(h2El4);
+      h2El4.textContent= 'Daily location total';
+    
+    }
+
+
+     
+    function footer() {
+      const containerTable= document.getElementById('shops');
+      const rowEl3=document.createElement('tr');
+      containerTable.appendChild(rowEl3);
+     
+      const h2El5=document.createElement('th');
+      rowEl3.appendChild(h2El5);
+      h2El5.textContent= 'Totals';
+    
+      for (let i = 0; i < 15; i++) {
+        const h2El58=document.createElement('th');
+        rowEl3.appendChild(h2El58);
+        h2El58.textContent=footerTable[i];
+      
+     }
+
+     }
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     header();
      seattle.render();
      tokyo.render();
      dubai.render();
      paris.render();
      lima.render();
-
+    footer();
      
      
   
