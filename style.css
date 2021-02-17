@@ -4,6 +4,11 @@
   }
 
 
+#pictoo{
+    height: 35%;
+    width: 100%;
+}
+
 h1{
 background-color: rgb(204, 245, 245);
 font-family: 'Indie Flower', cursive;
@@ -34,11 +39,29 @@ text-align: center;
         font-family: 'Risque', cursive;
     }
     
+    table, th, td {
+        border: 2px solid rgb(154, 252, 234);
+        position:;
+      }
+      
+      table {
+        width: 100%;
+      }
+      
+      th {
+        height: 20px;
+      }
+    
+      #cookieStandForm{
+      
+        background-color: #04ffa3;
+        color: rgb(0, 0, 0);
+       
+      }
     
     
     
-    
-    footer{
+      footer{
         height: 30px;
         background-color: rgb(255, 251, 207);
     }

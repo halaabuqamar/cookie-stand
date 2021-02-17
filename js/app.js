@@ -99,47 +99,66 @@
      }
      
      
+  
      
      
+    
      
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     header();
-     seattle.render();
-     tokyo.render();
-     dubai.render();
-     paris.render();
-     lima.render();
-    footer();
-     
-     
+ // lab 9-form
+ 
+ const form = document.getElementById("cookieStandForm");
+ form.addEventListener('submit', function(please){
+  please.preventDefault();
+ 
+  //The target.() one should be the same as the one in the htmlThe const ()= one should be the same as the new between paranth.
   
   
+  const location = please.target.location1.value; 
+  const minCust = please.target.minCust1.value;
+  const maxCust = please.target.maxCust1.value;
+  const avgsale = please.target.avgsale1.value;
+ 
+
+     const finalForm = new  Shop(location,minCust,maxCust, avgsale);
   
+     finalForm.render();
+    finalForm.footer();
+     
+     
+})
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-//     let seattle= {
+
+
+
+
+header();
+seattle.render();
+tokyo.render();
+dubai.render();
+paris.render();
+lima.render();
+footer();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ //     let seattle= {
 //     location:'seattle',
 //     minCust:23,
 //     maxCust:65,
