@@ -14,10 +14,31 @@
       
         <h1>Salmon Cookies</h1>
         <a href="./index.html">Home</a>
-        <img src="./image.jpg/salmon pic.jpeg" >
+        <img id="pictoo" src="./image.jpg/salmon pic.jpeg" alt="pic" >
     </header>
     <main>
         <table id="shops"></table>
+        <form id="cookieStandForm" onsubmit="event">
+            <fieldset>
+            <legend>new cookie stand</legend>
+            
+            <label for="location1">location</label>
+            <input type="text" id="location1"placeholder="country" />
+            
+            <label for="minCust1">minCust</label>
+            <input type="number" id="minCust1" />
+            
+            <label for="maxCust1">maxCust</label>
+            <input type="number" id="maxCust1" />
+            
+            <label for="avgsale1">average sale</label>
+            <input type="number" id="avgsale1" />
+            
+            <input type="submit" />
+            
+            </fieldset>
+             </form>
+            
     </main>
     <footer>
        &copy;
