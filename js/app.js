@@ -120,9 +120,9 @@
  
 
      const finalForm = new  Shop(location,minCust,maxCust, avgsale);
-  
+    
      finalForm.render();
-    finalForm.footer();
+    footer();
      
      
 })
